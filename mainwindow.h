@@ -27,8 +27,8 @@ signals:
 
 private:
     Ui::MainWindow *_ui;
-    Searcher *searcher;
-    QThread searcherThread;
+    Searcher *_searcher;
+    QThread _searcherThread;
     bool test = true;
 };
 #endif // MAINWINDOW_H
