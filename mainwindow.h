@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QThread>
 #include "searcher.h"
+#include "highlight.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,7 +21,6 @@ public:
 public slots:
     void updatePattern(const QString &text);
     void appendWord(const QString &word);
-    QString highlightWord(const QString &word);
 
 signals:
     void search();
@@ -28,7 +28,8 @@ signals:
 private:
     Ui::MainWindow *_ui;
     Searcher *_searcher;
+    Highlight *_highlight;
     QThread _searcherThread;
-    bool test = true;
+    QThread _highlightThread;
 };
 #endif // MAINWINDOW_H

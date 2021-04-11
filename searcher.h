@@ -2,7 +2,6 @@
 #define SEARCHER_H
 
 #include <QObject>
-#include <QThread>
 #include <fstream>
 
 class Searcher : public QObject
@@ -15,7 +14,7 @@ public:
     void setPattern(const QString &pattern);
     QString pattern() const;
     void stringSearch();
-    //void consecutiveSearch();
+    void consecutiveSearch();
     void stop();
     bool isSearch() const;
 

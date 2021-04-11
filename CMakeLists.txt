@@ -33,6 +33,8 @@ set(PROJECT_SOURCES
         mainwindow.h
         searcher.cpp
         searcher.h
+        highlight.cpp
+        highlight.h
         mainwindow.ui
 )
 
